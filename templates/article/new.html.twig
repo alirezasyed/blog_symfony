@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Nouvel article{% endblock %}
+
+{% block body %}
+    <h1>Créer un nouvel article</h1>
+
+    {{ include('article/_form.html.twig') }}
+
+    
+{% endblock %}

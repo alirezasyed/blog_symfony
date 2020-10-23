@@ -1,0 +1,13 @@
+<div class="container ba">
+{{ form_start(form) }}
+    {#{ form_widget(form) }#}
+    {{ form_row(form.title, {'label': 'Titre', 'attr': {'placeholder': 'Donnez un titre à l\'article'}}) }}
+    {{ form_row(form.content, {'label': 'Contenu', 'attr': {'rows': '10'}}) }}
+    {{ form_row(form.category, {'label': 'Catégorie'}) }}
+    {{ form_row(form.image, {'label': 'Image (URL)', 'attr': {'placeholder': 'Choisissez une image pour l\'article'}}) }}
+    <button id="up" class="btn btn-secondary mt-4">{{ button_label|default('Enregistrer') }}</button> 
+    <button id="cancel" type="reset" class="btn btn-secondary mt-4">Annuler</button>
+    <a class="btn btn-secondary mt-4" href="{{ path('article_index') }}">Retour page d'accueil</a> 
+
+{{ form_end(form) }}
+</div>

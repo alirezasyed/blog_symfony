@@ -1,0 +1,135 @@
+body {
+    background-image: url('../img/txt.jpg');
+    background-size: cover;
+    /* width: 100vh; */
+    background-attachment: fixed;
+}
+
+.co {
+    background-color: white;
+    opacity: 0.9;
+    margin-top: 56px;
+}
+
+.side {
+    background-color: #C7ABDD;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.coll {
+    width: 100%;
+    -webkit-filter: blur(5px);
+    z-index: 50;
+}
+
+.color {
+    background-color: white;
+}
+
+.fo {
+    background-color: white;
+    opacity: 0.9;
+    margin-top: 15%;
+    padding: 50px;
+    border: 2px solid gray;
+    border-radius: 15px;
+}
+
+.mr {
+    margin-left: 7%;
+    margin-top: 60px;
+}
+
+.tx {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    padding-bottom: 2%;
+    width: 100%;
+}
+
+.bt {
+    background-color: #797b81;
+}
+
+.btns {
+    background-color: #474a55;
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    border: 1px solid gray;
+    transition: 0.6s ease;
+    border-radius: 5px;
+}
+
+.btns:hover {
+    background-color: gray;
+    color: #fff;
+}
+
+.lo {
+    margin-top: 15%;
+    background-color: white;
+    border: 2px solid gray;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.conn {
+    background-color: gray;
+}
+
+.ba {
+    margin-top: 7%;
+    background-color: white;
+    border: 2px solid gray;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.hov a {
+    text-decoration: none;
+    color: #fff;
+    margin: 8px;
+    padding: 5px;
+    border: 1px solid #fff;
+    transition: 0.6s ease;
+    border-radius: 5px;
+}
+
+.hov a:hover {
+    background-color: #fff;
+    color: #000 !important;
+}
+
+#delete {
+    background-color: rgb(182, 0, 0);
+}
+
+#edit {
+    background-color: rgb(91, 46, 175);
+}
+
+#read {
+    background-color: rgb(1, 64, 124);
+}
+
+#edit {
+    background-color: rgb(34, 219, 142);
+}
+
+#up {
+    background-color: rgb(50, 211, 9);
+}
+
+#cancel {
+    background-color: rgb(199, 193, 193);
+}

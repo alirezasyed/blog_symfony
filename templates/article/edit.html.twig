@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Editer l'article{% endblock %}
+
+{% block body %}
+<h1>Editer l'article</h1>
+
+{{ include('article/_form.html.twig', {'button_label': 'Mise à jour'}) }}
+
+{{ include('article/_delete_form.html.twig') }}
+
+{% endblock %}

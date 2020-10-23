@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article index{% endblock %}
+
+{% block body %}
+<div class="container co">
+    <div class="row">
+        <div class="col-sm-10 mr">
+            {% for a in article %}
+            <article class="pr-4 mb-4 pb-3 text-justify">
+                <h4 class="text-danger font-weight-bold lead">{{ a.category.title }}</h4>
+                <h2>{{ a.title }}</h2>
+                <div class="text-muted py-1">
+                    Publié le {{ a.createdAt ? a.createdAt|date('d-m-Y à H:i:s') : '' }}
+                </div>
+                <div class="mt-2">
+                    <img class="float-left mr-3 img-fluid img" style="max-width: 200px; width: 100%;"
+                        src="{{ a.image }}" alt="{{ a.title }}">
+                    {{ a.content | slice(0,500) | raw | nl2br }}...
+                    <div class="d-flex justify-content-between">
+                        <a id="edit" class="btns btn-sm text-decoration-none"
+                            href="{{ path('article_edit', {'id': a.id}) }}">Editer
+                            l'article</a>
+                        <a id="read" class="btns btn-sm text-decoration-none"
+                            href="{{ path('article_show', {'id': a.id}) }}">Lire la
+                            suite</a>
+                        {% if app.user %}
+                    </div>
+
+                    {% endif %}
+                </div>
+            </article>
+            {% endfor %}
+            <div class="tx">
+                <h5> © 2020 Copyright:</h5>
+                <br>
+                <a href=""> véhicules.com</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- <a href="{#{ path('article_show', {'id': a.id}) }#}">show</a>
+    <a href="{#{ path('article_edit', {'id': a.id}) }#}">edit</a> 
+    <a href="{#{ path('article_new') }#}">Create new</a>
+ -->
+
+
+
+    {% endblock %}
